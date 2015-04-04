@@ -90,7 +90,22 @@ module.exports = function(grunt) {
           }
         },
 
+        // Minify HTML & CSS
 
+        htmlmin: {                                    
+          dist: {                                      
+            options: {                                 
+              removeComments: true,
+              collapseWhitespace: true,
+              minifyCSS: true
+            },
+            files: [{
+                expand: true,
+                src: ['dist/*.html'],
+                dest: ''
+            }]
+          },
+        },
 
         // Watches for changes to css or email templates then runs grunt tasks
         watch: {
@@ -204,6 +219,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-mailgun');
     grunt.loadNpmTasks('grunt-premailer');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-cloudfiles');
     grunt.loadNpmTasks('grunt-cdn');
@@ -212,7 +228,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass','assemble','premailer', 'imagemin']);
+    grunt.registerTask('default', ['sass','assemble','premailer', 'imagemin', 'htmlmin']);
 
     // Use grunt send if you want to actually send the email to your inbox
     grunt.registerTask('send', ['mailgun']);

@@ -309,9 +309,6 @@ hr {
   border: none;
 }
 
-/**********************************************
-* Ink v1.0.5 - Copyright 2013 ZURB Inc        *
-**********************************************/
 /*  Media Queries */
 @media only screen and (max-width: 600px) {
   table[class="body"] img {
