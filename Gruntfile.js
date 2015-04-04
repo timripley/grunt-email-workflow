@@ -1,17 +1,11 @@
 module.exports = function(grunt) {
 
-
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
         // secrets.json is ignored in git because it contains sensitive data
         // See the README for configuration settings
         secrets: grunt.file.readJSON('secrets.json'),
-
-
-
-
 
         // Takes your scss files and compiles them to css
         sass: {
@@ -24,10 +18,6 @@ module.exports = function(grunt) {
             }
           }
         },
-
-
-
-
 
         // Assembles your email content with html layout
         assemble: {
@@ -42,10 +32,6 @@ module.exports = function(grunt) {
             dest: 'dist/'
           }
         },
-
-
-
-
 
         // Inlines your css
         premailer: {
@@ -72,8 +58,6 @@ module.exports = function(grunt) {
           }
         },
 
-
-
         // Optimize images
         imagemin: {
           dynamic: {
@@ -91,7 +75,6 @@ module.exports = function(grunt) {
         },
 
         // Minify HTML & CSS
-
         htmlmin: {                                    
           dist: {                                      
             options: {                                 
@@ -114,9 +97,6 @@ module.exports = function(grunt) {
         },
 
 
-
-
-
         // Use Mailgun option if you want to email the design to your inbox or to something like Litmus
         // grunt send --template=transaction.html
         mailgun: {
@@ -130,10 +110,6 @@ module.exports = function(grunt) {
             src: ['dist/'+grunt.option('template')]
           }
         },
-
-
-
-
 
         // Use Rackspace Cloud Files if you're using images in your email
         cloudfiles: {
@@ -164,7 +140,6 @@ module.exports = function(grunt) {
           }
         },
 
-
         // Use Amazon S3 for images
         s3: {
           options: {
@@ -193,7 +168,6 @@ module.exports = function(grunt) {
             ]
           }
         },
-
 
         // Send your email template to Litmus for testing
         // grunt litmus --template=transaction.html
@@ -231,7 +205,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['sass','assemble','premailer', 'imagemin', 'htmlmin']);
 
     // Use grunt send if you want to actually send the email to your inbox
-    grunt.registerTask('send', ['mailgun']);
+    grunt.registerTask('send', ['sass','assemble','premailer', 'imagemin', 'htmlmin','mailgun']);
 
     // Upload images to our CDN on Rackspace Cloud Files
     grunt.registerTask('cdnify', ['default','cloudfiles','cdn']);

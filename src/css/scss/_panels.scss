@@ -1,7 +1,7 @@
 /* Panels */
 .panel {
-  background: #f2f2f2;
-  border: 1px solid #d9d9d9;
+  background: $panel-background-color;
+  border: $panel-border;
   padding: 10px !important;
 }
 

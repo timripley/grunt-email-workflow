@@ -10,9 +10,11 @@ This grunt task helps simplify things at the design stage.
 
 3. Inlines your CSS
 
-4. Uploads any images to a CDN (optional)
+4. Minifies your HTML and CSS 
 
-5. Sends you a test email to your inbox (optional)
+5. Uploads any images to a CDN (optional)
+
+6. Sends you a test email to your inbox (optional)
 
 ## Requirements
 
@@ -76,6 +78,8 @@ We encourage you __not__ to store sensitive data in your git repository. If you 
 This project uses [SCSS](http://sass-lang.com/). You don't need to touch the .css files, these are compiled automatically.
 
 For changes to CSS, modify the `.scss` files.
+
+Sass variables in _settings.scss for background-color, typography and panels.
 
 Media queries and responsive styles are in a separate style sheet so that they don't get inlined. Note that only a few clients support media queries e.g. iOS Mail app.
 
@@ -154,9 +158,9 @@ Run `grunt cdnify send --template=branded.html` to send the email to yourself wi
 
 ### Sample email templates
 
-I've added two templates here to help you get started.
+I've added two templates here to help you get started. (minus their custom styling)
 
-* [Simple transactional email template](http://leemunroe.github.io/grunt-email-design/dist/transaction.html)
-* [Branded email via CDN](http://leemunroe.github.io/grunt-email-design/dist/branded.html)
+* [Basic](http://leemunroe.github.io/grunt-email-design/dist/transaction.html)
+* [Sidebar Hero](http://leemunroe.github.io/grunt-email-design/dist/branded.html)
 
-For more transactional email templates check out [Mailgun's collection of templates](http://github.com/mailgun/transactional-email-templates).
+For more transactional email templates check out [Zurb Ink's collection of templates](http://zurb.com/ink/templates.php).
