@@ -160,7 +160,7 @@ Run `grunt cdnify send --template=branded.html` to send the email to yourself wi
 
 I've added two templates here to help you get started. (minus their custom styling)
 
-* [Basic](http://leemunroe.github.io/grunt-email-design/dist/transaction.html)
-* [Sidebar Hero](http://leemunroe.github.io/grunt-email-design/dist/branded.html)
+* [Basic](http://zurb.com/ink/downloads/templates/basic.html)
+* [Sidebar Hero](http://zurb.com/ink/downloads/templates/sidebar-hero.html)
 
 For more transactional email templates check out [Zurb Ink's collection of templates](http://zurb.com/ink/templates.php).
