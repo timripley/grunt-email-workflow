@@ -20,7 +20,7 @@ module.exports = function(grunt) {
               style: 'expanded'
             },
             files: {
-              'src/css/main.css': 'src/css/scss/main.scss'
+              'src/css/ink.css': 'src/css/scss/ink.scss'
             }
           }
         },
