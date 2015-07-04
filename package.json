@@ -19,5 +19,10 @@
     "grunt-premailer": "0.2.5",
     "grunt-s3": "^0.2.0-alpha.3",
     "imagemin-mozjpeg": "^0.1.2"
+  },
+  "dependencies": {
+    "assemble-handlebars": "^0.3.0",
+    "grunt-uncss": "^0.4.3",
+    "handlebars-helpers": "^0.5.8"
   }
 }

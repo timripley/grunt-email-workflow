@@ -6,6 +6,8 @@ This grunt task helps simplify things at the design stage.
 
 1. Compiles your SCSS to CSS
 
+2. Removes unused CSS (testing)
+
 2. Builds your HTML and TXT email templates
 
 3. Inlines your CSS
@@ -104,8 +106,10 @@ Handlebars and Assemble are used for templating.
 In terminal, run `grunt`. This will:
 
 * Compile your SCSS to CSS
+* Remove unused CSS
 * Generate your email layout and content
 * Inline your CSS
+* Minify the HTML
 
 See the output HTML in the `dist` folder. Open them and preview it the browser.
 

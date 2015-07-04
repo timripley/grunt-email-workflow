@@ -25,19 +25,28 @@ module.exports = function(grunt) {
             layoutdir: 'src/layouts',
             partials: ['src/partials/**/*.hbs'],
             data: ['src/data/*.{json,yml}'],
-            flatten: true
+            flatten: true,
           },
           pages: {
-            src: ['src/emails/*.hbs'],
+            src: ['src/emails/*/*.hbs'],
             dest: 'dist/'
           }
         },
+
+        // Remove unused css
+        uncss: {
+          dist: {
+            files: {
+              'src/css/ink.css': ['dist/*.html']
+            }
+          }
+		    },
 
         // Inlines your css
         premailer: {
           html: {
             options: {
-              removeComments: true
+              removeComments: true,
             },
             files: [{
                 expand: true,
@@ -191,6 +200,7 @@ module.exports = function(grunt) {
     // Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-mailgun');
     grunt.loadNpmTasks('grunt-premailer');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
@@ -202,10 +212,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass','assemble','premailer', 'imagemin', 'htmlmin']);
+    grunt.registerTask('default', ['sass','assemble', 'uncss', 'premailer', 'imagemin', 'htmlmin']);
 
     // Use grunt send if you want to actually send the email to your inbox
-    grunt.registerTask('send', ['sass','assemble','premailer', 'imagemin', 'htmlmin','mailgun']);
+    grunt.registerTask('send', ['sass','assemble', 'uncss', 'premailer', 'imagemin', 'htmlmin', 'mailgun']);
 
     // Upload images to our CDN on Rackspace Cloud Files
     grunt.registerTask('cdnify', ['default','cloudfiles','cdn']);
