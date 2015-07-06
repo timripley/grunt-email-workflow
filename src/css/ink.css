@@ -6,77 +6,6 @@
 
 /* Panels */
 
-/* Alignment & Visibility Classes */
-
-td.center {
-  text-align: center;
-}
-
-/* Block Grid */
-
-/* Buttons */
-
-table.button,
-table.tiny-button {
-  width: 100%;
-  overflow: hidden;
-}
-
-table.button td,
-table.tiny-button td {
-  display: block;
-  width: auto !important;
-  text-align: center;
-  background: #2ba6cb;
-  border: 1px solid #2284a1;
-  color: #ffffff;
-  padding: 8px 0;
-}
-
-table.tiny-button td {
-  padding: 5px 0 4px;
-}
-
-table.button td a,
-table.tiny-button td a {
-  font-weight: bold;
-  text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-table.tiny-button td a {
-  font-size: 12px;
-  font-weight: normal;
-}
-
-table.button:hover td,
-table.button:visited td,
-table.button:active td {
-  background: #2795b6 !important;
-}
-
-table.button:hover td a,
-table.button:visited td a,
-table.button:active td a {
-  color: #fff !important;
-}
-
-table.button:hover td,
-table.tiny-button:hover td {
-  background: #2795b6 !important;
-}
-
-table.button:hover td a,
-table.button:active td a,
-table.button td a:visited,
-table.tiny-button:hover td a,
-table.tiny-button:active td a,
-table.tiny-button td a:visited {
-  color: #ffffff !important;
-}
-
 /* Outlook First */
 
 /* Client-specific Styles & Reset */
@@ -137,70 +66,6 @@ hr {
   background-color: #d9d9d9;
   height: 1px;
   border: none;
-}
-
-/*  Media Queries */
-
-@media only screen and (max-width: 600px) {
-  table[class="body"] img {
-    width: auto !important;
-    height: auto !important;
-  }
-
-  table[class="body"] center {
-    min-width: 0 !important;
-  }
-
-  table[class="body"] .container {
-    width: 95% !important;
-  }
-
-  table[class="body"] .row {
-    width: 100% !important;
-    display: block !important;
-  }
-
-  table[class="body"] .wrapper {
-    display: block !important;
-    padding-right: 0 !important;
-  }
-
-  table[class="body"] .columns {
-    table-layout: fixed !important;
-    float: none !important;
-    width: 100% !important;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-    display: block !important;
-  }
-
-  table[class="body"] table.columns td {
-    width: 100% !important;
-  }
-
-  table[class="body"] .columns td.six {
-    width: 50% !important;
-  }
-
-  table[class="body"] table.columns td.expander {
-    width: 1px !important;
-  }
-
-  table[class="body"] .right-text-pad {
-    padding-left: 10px !important;
-  }
-
-  table[class="body"] .left-text-pad {
-    padding-right: 10px !important;
-  }
-}
-
-/* Panels */
-
-.panel {
-  background: #f2f2f2;
-  border: 1px solid #d9d9d9;
-  padding: 10px !important;
 }
 
 /* Responsive Grid */
@@ -282,6 +147,16 @@ table.columns .right-text-pad {
   padding-right: 10px;
 }
 
+/* Block Grid */
+
+/* Alignment & Visibility Classes */
+
+td.center {
+  text-align: center;
+}
+
+/* Visibility Classes */
+
 /* Typography */
 
 body,
@@ -352,7 +227,132 @@ a:visited {
   color: #2ba6cb !important;
 }
 
-/* Visibility Classes */
+/* Panels */
+
+.panel {
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 10px !important;
+}
+
+/* Buttons */
+
+table.button,
+table.tiny-button {
+  width: 100%;
+  overflow: hidden;
+}
+
+table.button td,
+table.tiny-button td {
+  display: block;
+  width: auto !important;
+  text-align: center;
+  background: #2ba6cb;
+  border: 1px solid #2284a1;
+  color: #ffffff;
+  padding: 8px 0;
+}
+
+table.tiny-button td {
+  padding: 5px 0 4px;
+}
+
+table.button td a,
+table.tiny-button td a {
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+table.tiny-button td a {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+table.button:hover td,
+table.button:visited td,
+table.button:active td {
+  background: #2795b6 !important;
+}
+
+table.button:hover td a,
+table.button:visited td a,
+table.button:active td a {
+  color: #fff !important;
+}
+
+table.button:hover td,
+table.tiny-button:hover td {
+  background: #2795b6 !important;
+}
+
+table.button:hover td a,
+table.button:active td a,
+table.button td a:visited,
+table.tiny-button:hover td a,
+table.tiny-button:active td a,
+table.tiny-button td a:visited {
+  color: #ffffff !important;
+}
+
+/*  Media Queries */
+
+@media only screen and (max-width: 600px) {
+  table[class="body"] img {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
+
+  table[class="body"] .container {
+    width: 95% !important;
+  }
+
+  table[class="body"] .row {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper {
+    display: block !important;
+    padding-right: 0 !important;
+  }
+
+  table[class="body"] .columns {
+    table-layout: fixed !important;
+    float: none !important;
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    display: block !important;
+  }
+
+  table[class="body"] table.columns td {
+    width: 100% !important;
+  }
+
+  table[class="body"] .columns td.six {
+    width: 50% !important;
+  }
+
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
+  }
+
+  table[class="body"] .right-text-pad {
+    padding-left: 10px !important;
+  }
+
+  table[class="body"] .left-text-pad {
+    padding-right: 10px !important;
+  }
+}
 
 /* Custom CSS */
 

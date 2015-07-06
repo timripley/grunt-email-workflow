@@ -1,14 +1,14 @@
 // Ink scss styles
-@import 'settings';
-@import 'alignment';
-@import 'block-grid';
-@import 'buttons';
+@import 'variables-mixins';
 @import 'client-specific';
-@import 'media-queries';
-@import 'panels';
 @import 'responsive-grid';
-@import 'typography';
+@import 'block-grid';
+@import 'alignment';
 @import 'visibility';
+@import 'typography';
+@import 'panels';
+@import 'buttons';
+@import 'media-queries';
 
 // Custom scss styles
 @import 'custom-preheader';
